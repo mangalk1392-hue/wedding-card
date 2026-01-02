@@ -5,7 +5,7 @@
 <title>विवाह निमंत्रण</title>
 
 <style>
-body{
+body
     margin:0;
     font-family:Mangal, Arial, sans-serif;
     background:linear-gradient(#fff3f6,#ffe0ea);
