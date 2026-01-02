@@ -1,1 +1,126 @@
-# wedding-card
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>विवाह निमंत्रण</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Mangal, Arial, sans-serif;
+    background:linear-gradient(#fff3f6,#ffe0ea);
+    text-align:center;
+    scroll-behavior:smooth;
+}
+.page{
+    min-height:100vh;
+    padding:40px 20px;
+}
+h1{
+    color:#a0004d;
+    font-size:40px;
+}
+h2{
+    color:#7a003c;
+    font-size:32px;
+}
+.names{
+    font-size:34px;
+    font-weight:bold;
+    color:#8b0045;
+    margin-top:20px;
+}
+.quote{
+    font-style:italic;
+    color:#555;
+    margin-top:25px;
+    font-size:20px;
+}
+img{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    border:5px solid #ff9ecb;
+    margin:20px;
+    object-fit:cover;
+}
+button{
+    padding:12px 30px;
+    font-size:20px;
+    background:#b30059;
+    color:white;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    margin-top:30px;
+}
+.event{
+    background:white;
+    max-width:600px;
+    margin:20px auto;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    font-size:22px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- पहला पेज -->
+<div class="page" id="page1">
+    <h1>🌸विवाह निमंत्रण पत्र 🌸</h1>
+
+    <img src=/image/a.jpg>
+    
+
+    <div class="names">
+        रवि सिंह 💖 खुशबू सिंह
+    </div>
+
+    <p class="quote">
+        ♥️"दो दिलों का मिलन,<br>
+        प्रेम और विश्वास से बंधा<br>
+        एक पवित्र वैवाहिक बंधन"♥️
+    </p>
+
+    <a href="#page2">
+        <button>➡️ आगे देखें</button>
+    </a>
+</div>
+
+<!-- दूसरा पेज -->
+<div class="page" id="page2">
+    <h2>📿 विवाह कार्यक्रम के बारे में 📿</h2>
+
+    <div class="event">
+        <strong>शुभ तिलक समारोह</strong><br>
+        दिनांक: 25 अप्रैल 2026<br>
+        यह समारोह विवाह की शुभ शुरुआत का प्रतीक है।
+    </div>
+
+    <div class="event">
+        <strong>शुभ हल्दी समारोह</strong><br>
+        दिनांक: 27 अप्रैल 2026<br>
+        हल्दी संस्कार से वर-वधू के जीवन में सुख,
+        समृद्धि एवं स्वास्थ्य की कामना की जाती है।
+    </div>
+
+    <div class="event">
+        <strong>शुभ विवाह समारोह</strong><br>
+        दिनांक: 28 अप्रैल 2026<br>
+        वैदिक मंत्रोच्चारण के साथ
+        वर-वधू पवित्र अग्नि के समक्ष सात फेरे लेंगे।
+    </div>
+
+    <p class="quote">
+        "आप सभी का आशीर्वाद  <br>
+        हमारे इस मंगल अवसर को अविस्मरणीय बनाएगा।"
+    </p>
+
+    
+</div>
+
+</body>
+</html>
