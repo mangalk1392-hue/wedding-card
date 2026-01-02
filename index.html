@@ -2,194 +2,125 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<title>Wedding Invitation - Ravi & Khushbu</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>विवाह निमंत्रण</title>
 
 <style>
 body{
     margin:0;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:radial-gradient(circle,#ffdde1,#ee9ca7);
-    font-family: 'Segoe UI', sans-serif;
-    overflow:hidden;
-}
-
-/* Floating hearts animation */
-body::before{
-    content:"💖 💕 💞 💓";
-    position:absolute;
-    width:100%;
-    height:100%;
+    font-family:Mangal, Arial, sans-serif;
+    background:linear-gradient(#fff3f6,#ffe0ea);
     text-align:center;
-    font-size:40px;
-    animation:float 8s infinite linear;
-    opacity:0.15;
+    scroll-behavior:smooth;
 }
-
-@keyframes float{
-    0%{transform:translateY(100%);}
-    100%{transform:translateY(-120%);}
-}
-
-.card{
-    width:330px;
-    height:440px;
-    perspective:1400px;
-}
-
-.inner{
-    width:100%;
-    height:100%;
-    position:relative;
-    transform-style:preserve-3d;
-    transition:transform 1.4s;
-}
-
-.card.open .inner{
-    transform:rotateY(180deg) scale(1.05);
-}
-
 .page{
-    position:absolute;
-    width:100%;
-    height:100%;
-    backface-visibility:hidden;
-    border-radius:22px;
-    box-shadow:0 20px 40px rgba(0,0,0,0.35);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    padding:20px;
-    text-align:center;
+    min-height:100vh;
+    padding:40px 20px;
 }
-
-/* First Page */
-.front{
-    background:linear-gradient(145deg,#fff1eb,#ace0f9);
-    animation:glow 2s infinite alternate;
+h1{
+    color:#a0004d;
+    font-size:40px;
 }
-
-@keyframes glow{
-    from{box-shadow:0 0 10px #ff4d88;}
-    to{box-shadow:0 0 30px #ff1a66;}
+h2{
+    color:#7a003c;
+    font-size:32px;
 }
-
-.front h1{
-    color:#b30059;
-    font-size:26px;
-}
-
-.front h2{
-    font-size:20px;
-    color:#333;
-}
-
-.front p{
+.names{
+    font-size:34px;
+    font-weight:bold;
+    color:#8b0045;
     margin-top:20px;
-    font-size:14px;
-    animation:blink 1.5s infinite;
 }
-
-@keyframes blink{
-    0%,100%{opacity:1;}
-    50%{opacity:0.4;}
+.quote{
+    font-style:italic;
+    color:#555;
+    margin-top:25px;
+    font-size:20px;
 }
-
-/* Second Page */
-.back{
-    background:linear-gradient(145deg,#fdfbfb,#ebedee);
-    transform:rotateY(180deg);
+img{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    border:5px solid #ff9ecb;
+    margin:20px;
+    object-fit:cover;
 }
-
-.back h2{
-    color:#b30059;
-    margin-bottom:12px;
-}
-
-.back p{
-    font-size:16px;
-    margin:6px 0;
-}
-
 button{
-    margin-top:10px;
-    padding:8px 16px;
-    border:none;
-    border-radius:20px;
-    background:#25D366;
+    padding:12px 30px;
+    font-size:20px;
+    background:#b30059;
     color:white;
-    font-size:14px;
+    border:none;
+    border-radius:30px;
     cursor:pointer;
-    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    margin-top:30px;
 }
-button:hover{
-    transform:scale(1.05);
+.event{
+    background:white;
+    max-width:600px;
+    margin:20px auto;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    font-size:22px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- Wedding Song -->
-<audio id="song" loop>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
-</audio>
+<!-- पहला पेज -->
+<div class="page" id="page1">
+    <h1>🌸विवाह निमंत्रण पत्र 🌸</h1>
 
-<div class="card" onclick="openCard()">
-    <div class="inner">
+    <img src=/image/a.jpg>
+    
 
-        <!-- First Page -->
-        <div class="page front">
-            <h1>💐 Wedding Invitation 💐</h1>
-            <h2>Ravi Singh</h2>
-            <h2>❤️</h2>
-            <h2>Khushbu Singh</h2>
-            <p>Tap to Open Card</p>
-        </div>
-
-        <!-- Second Page -->
-        <div class="page back">
-            <h2>शुभ विवाह कार्यक्रम</h2>
-            <p>🌸 शुभ तिलक – 25/04/2026</p>
-            <p>🌼 शुभ हल्दी – 27/04/2026</p>
-            <p>💍 शुभ विवाह – 28/04/2026</p>
-
-            <button onclick="playSong()">🎵 शादी का गाना</button>
-            <button onclick="shareWhatsApp()">📲 WhatsApp Share</button>
-
-            <p style="margin-top:15px;">आपका हार्दिक स्वागत है 🙏</p>
-        </div>
-
+    <div class="names">
+        रवि सिंह 💖 खुशबू सिंह
     </div>
+
+    <p class="quote">
+        ♥️"दो दिलों का मिलन,<br>
+        प्रेम और विश्वास से बंधा<br>
+        एक पवित्र वैवाहिक बंधन"♥️
+    </p>
+
+    <a href="#page2">
+        <button>➡️ आगे देखें</button>
+    </a>
 </div>
 
-<script>
-function openCard(){
-    document.querySelector('.card').classList.toggle('open');
-    playSong();
-}
+<!-- दूसरा पेज -->
+<div class="page" id="page2">
+    <h2>📿 विवाह कार्यक्रम के बारे में 📿</h2>
 
-function playSong(){
-    document.getElementById("song").play();
-}
+    <div class="event">
+        <strong>शुभ तिलक समारोह</strong><br>
+        दिनांक: 25 अप्रैल 2026<br>
+        यह समारोह विवाह की शुभ शुरुआत का प्रतीक है।
+    </div>
 
-function shareWhatsApp(){
-    let msg = 
-"💐 Wedding Invitation 💐\n\n" +
-"Ravi Singh ❤️ Khushbu Singh\n\n" +
-"🌸 शुभ तिलक – 25/04/2026\n" +
-"🌼 शुभ हल्दी – 27/04/2026\n" +
-"💍 शुभ विवाह – 28/04/2026\n\n" +
-"आपका हार्दिक स्वागत है 🙏";
+    <div class="event">
+        <strong>शुभ हल्दी समारोह</strong><br>
+        दिनांक: 27 अप्रैल 2026<br>
+        हल्दी संस्कार से वर-वधू के जीवन में सुख,
+        समृद्धि एवं स्वास्थ्य की कामना की जाती है।
+    </div>
 
-    let url = "https://wa.me/?text=" + encodeURIComponent(msg);
-    window.open(url, "_blank");
-}
-</script>
+    <div class="event">
+        <strong>शुभ विवाह समारोह</strong><br>
+        दिनांक: 28 अप्रैल 2026<br>
+        वैदिक मंत्रोच्चारण के साथ
+        वर-वधू पवित्र अग्नि के समक्ष सात फेरे लेंगे।
+    </div>
+
+    <p class="quote">
+        "आप सभी का आशीर्वाद  <br>
+        हमारे इस मंगल अवसर को अविस्मरणीय बनाएगा।"
+    </p>
+
+    
+</div>
 
 </body>
 </html>
